@@ -40,7 +40,7 @@ class Controller_ListScreen: UIViewController, UITableViewDelegate, UITableViewD
         
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell_ListScreen", forIndexPath: indexPath) as! Cell_ListScreen
         
-       // cell.textLabel!.text = "A cell"
+        cell.label.text = "A cell"
 
         
         return cell
