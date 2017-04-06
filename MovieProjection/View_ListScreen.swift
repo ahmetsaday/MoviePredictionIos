@@ -27,7 +27,7 @@ class View_Detail: UIView {
         
         tableView.frame = self.frame
         tableView.registerClass(Cell_ListScreen.self, forCellReuseIdentifier: "Cell_ListScreen")
-        tableView.rowHeight = self.frame.height/8
+        tableView.rowHeight = self.frame.height/5
         tableView.delegate = target
         tableView.dataSource = target
         tableView.backgroundColor = UIColor.whiteColor()
