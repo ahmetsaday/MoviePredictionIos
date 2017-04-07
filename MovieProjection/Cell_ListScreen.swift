@@ -23,16 +23,10 @@ class Cell_ListScreen: UITableViewCell {
     var descriptions = UILabel()
     
     
-   
-    let button = UIButton()
-    
-    
-    
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         self.selectionStyle = UITableViewCellSelectionStyle.None
-        //setCreateUI()
         
         setCreateUI()
     }
@@ -146,33 +140,7 @@ class Cell_ListScreen: UITableViewCell {
         descriptions.textColor = UIColor.grayColor()
         //descriptions.backgroundColor = UIColor.grayColor()
 
-        /*
-        self.addSubview(label)
-        label.snp_makeConstraints { (make) in
-            make.top.equalTo(self)
-            make.bottom.equalTo(self)
-            make.right.equalTo(self)
-            make.left.equalTo(self)
-        }
-        label.textColor = UIColor.whiteColor()
-        label.textAlignment = NSTextAlignment.Center
-        label.text="deneme"
-        
- 
-        
-        
-        button.layer.cornerRadius = 33
-        button.setTitle("+", forState: .Normal)
-        button.backgroundColor = UIColor.blackColor()
-        self.addSubview(button)
-        button.snp_makeConstraints { (make) -> Void in
-            make.width.equalTo(80)
-            make.height.equalTo(80)
-            make.bottom.equalTo(self.snp_bottom).offset(-20)
-            make.right.equalTo(self.snp_right).offset(-20)
-        }
- 
-        */
+
         
        // self.backgroundColor = UIColor.whiteColor()
         

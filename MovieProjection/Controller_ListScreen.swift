@@ -19,11 +19,6 @@ class Controller_ListScreen: UIViewController, UITableViewDelegate, UITableViewD
         self.view.addSubview(listview)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     
     // Tableview Delegate
     
@@ -44,7 +39,10 @@ class Controller_ListScreen: UIViewController, UITableViewDelegate, UITableViewD
         return cell
     }
     
-    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let destination = Controller_DetailScreen() // Your destination
+        navigationController?.pushViewController(destination, animated: true)
+    }
     
     
 }

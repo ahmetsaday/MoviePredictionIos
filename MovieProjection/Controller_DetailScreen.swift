@@ -10,4 +10,9 @@ import UIKit
 
 class Controller_DetailScreen: UIViewController{
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        view.backgroundColor = UIColor.blueColor()
+    }
 }
