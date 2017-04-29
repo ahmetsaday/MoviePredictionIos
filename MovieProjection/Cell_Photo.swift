@@ -12,6 +12,7 @@ import SnapKit
 class Cell_Photo: UICollectionViewCell {
     
     var img_Photo = UIImageView()
+    var testText = UILabel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -34,6 +35,13 @@ class Cell_Photo: UICollectionViewCell {
         img_Photo.backgroundColor = UIColor.clearColor()
         img_Photo.layer.masksToBounds = true
         img_Photo.contentMode = UIViewContentMode.ScaleAspectFill
+        
+        self.addSubview(testText)
+        testText.snp_makeConstraints{ (make) in
+            make.top.equalTo(self.snp_top).offset(10)
+            make.left.equalTo(self.snp_left).offset(10)
+        }
+        testText.text = "test text"
         
     }
 }

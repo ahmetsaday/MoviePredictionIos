@@ -35,13 +35,13 @@ class Controller_DetailScreen: UIViewController, UITableViewDelegate, UITableVie
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if(section == 0){
             
-            print("sec 1")
+           // print("sec 1")
             return 1//resim video kısımı
         }
         
         if(section == 1){
         
-            print("sec 2")
+           // print("sec 2")
             return 10//aktorlerin
             
         }
@@ -53,7 +53,7 @@ class Controller_DetailScreen: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        print("index path", indexPath.section)
+       // print("index path", indexPath.section)
         
         
       //  let cell2 = tableView.dequeueReusableCellWithIdentifier("Cell_actor_label", forIndexPath: indexPath) as! Cell_Actor_Label
@@ -70,7 +70,7 @@ class Controller_DetailScreen: UIViewController, UITableViewDelegate, UITableVie
         if (indexPath.section == 1){
             //Aktorlerin kısmı
             
-            let cell2 = tableView.dequeueReusableCellWithIdentifier("Cell_Header", forIndexPath: indexPath) as! Cell_Actors
+            let cell2 = tableView.dequeueReusableCellWithIdentifier("Cell_Actors", forIndexPath: indexPath) as! Cell_Actors
             cell2.backgroundColor = UIColor.redColor()
             return cell2
         }
@@ -113,6 +113,15 @@ class Controller_DetailScreen: UIViewController, UITableViewDelegate, UITableVie
         }
         
         return vw
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat{
+        if (indexPath.section == 0) {
+            return 150
+        }else if(indexPath.section == 1){
+            return 60
+        }
+        return 0
     }
     
     

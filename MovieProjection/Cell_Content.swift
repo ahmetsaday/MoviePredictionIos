@@ -27,7 +27,7 @@ class Cell_Content: UITableViewCell {
     
     func setCreateVideoUI(){
       
-        collection = View_Media(frame: CGRect(x: 0, y: 0, width: UIScreen.mainScreen().bounds.width, height: UIScreen.mainScreen().bounds.height/10), collectionViewLayout: UICollectionViewFlowLayout())
+        collection = View_Media(frame: CGRect(x: 0, y: 0, width: UIScreen.mainScreen().bounds.width, height: 150), collectionViewLayout: UICollectionViewFlowLayout())
         collection?.backgroundColor = UIColor.brownColor()
         
         self.addSubview(collection!)

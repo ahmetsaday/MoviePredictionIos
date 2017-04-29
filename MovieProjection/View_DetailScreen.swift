@@ -179,17 +179,15 @@ class View_DetailScreen: UIView{
         
         
         tableView.frame = self.frame
-        tableView.registerClass(Cell_Actors.self, forCellReuseIdentifier: "Cell_Header")
+        tableView.registerClass(Cell_Actors.self, forCellReuseIdentifier: "Cell_Actors")
         
         tableView.registerClass(Cell_Content.self, forCellReuseIdentifier: "CELL_CONTENT")
-        tableView.rowHeight = self.frame.height/10
+        //tableView.rowHeight = self.frame.height/10
         tableView.delegate = target
         tableView.dataSource = target
         tableView.backgroundColor = UIColor.whiteColor()
         tableView.tableHeaderView = headerView
         self.addSubview(tableView)
-
-        
 
         
 
