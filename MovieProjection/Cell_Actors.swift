@@ -9,9 +9,11 @@
 import UIKit
 import SnapKit
 
-class Cell_Header: UITableViewCell {
+class Cell_Actors: UITableViewCell {
     
-    var lbl_test = UILabel()
+    
+    var lbl_actor = UILabel()
+    var lbl_role = UILabel()
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -27,11 +29,22 @@ class Cell_Header: UITableViewCell {
     
     func setCreateHeaderUI(){
         
-        self.addSubview(lbl_test)
-        lbl_test.snp_makeConstraints{ (make) in
-            make.top.equalTo(self.snp_top).offset(10)
+        
+        
+        self.addSubview(lbl_actor)
+        lbl_actor.snp_makeConstraints{ (make) in
+            make.top.equalTo(self.snp_top).offset(20)
+            make.left.equalTo(self.snp_left).offset(20)
         }
-        lbl_test.text = "deneme"
+        lbl_actor.text = "Actor Name"
+        
+        
+        self.addSubview(lbl_role)
+        lbl_role.snp_makeConstraints{ (make) in
+            make.top.equalTo(self.snp_top).offset(20)
+            make.left.equalTo(self.snp_left).offset(200)
+        }
+        lbl_role.text = "Role Name"
         
         
         self.contentView.setNeedsLayout()
