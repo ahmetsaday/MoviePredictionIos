@@ -7,4 +7,5 @@ target 'MovieProjection' do
 
   # Pods for MovieProjection
   pod 'SnapKit','=0.21.1'
+  pod 'Alamofire','=3.4.1'
 end

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class Controller_ListScreen: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
@@ -21,6 +22,17 @@ class Controller_ListScreen: UIViewController, UITableViewDelegate, UITableViewD
         
         self.view.backgroundColor = UIColor(patternImage: UIImage(named:"arkaplan.jpg")!).colorWithAlphaComponent(0.30)
         //self.view.isOpaque = false
+        
+        // Data parsing
+        Alamofire.request(.GET, "http://api.androidhive.info/json/movies.json")
+            .responseJSON { response in
+                
+                
+                
+                if let JSON = response.result.value {
+                    print("JSON: \(JSON)")
+                }
+        }
         
     }
 

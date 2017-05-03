@@ -32,7 +32,7 @@ class Cell_Photo: UICollectionViewCell {
             make.size.equalTo(self)
             make.center.equalTo(self)
         }
-        img_Photo.backgroundColor = UIColor.clearColor()
+        img_Photo.backgroundColor = UIColor.whiteColor()
         img_Photo.layer.masksToBounds = true
         img_Photo.contentMode = UIViewContentMode.ScaleAspectFill
         
