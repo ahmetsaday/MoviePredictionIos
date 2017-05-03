@@ -18,7 +18,13 @@ class Controller_DetailScreen: UIViewController, UITableViewDelegate, UITableVie
         
         headerView = View_DetailScreen(frame: self.view.frame)
         headerView!.setCreateUI(self)
+        headerView?.backgroundColor = UIColor.clearColor()
         self.view.addSubview(headerView!)
+        
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named:"arkaplan.jpg")!).colorWithAlphaComponent(0.30)
+        
+        let image = UIImage(named: "star.png")
+        headerView?.img_star.image = image
         
         
     }
@@ -71,7 +77,7 @@ class Controller_DetailScreen: UIViewController, UITableViewDelegate, UITableVie
             //Aktorlerin kısmı
             
             let cell2 = tableView.dequeueReusableCellWithIdentifier("Cell_Actors", forIndexPath: indexPath) as! Cell_Actors
-            cell2.backgroundColor = UIColor.redColor()
+            cell2.backgroundColor = UIColor.clearColor()
             return cell2
         }
         
@@ -101,13 +107,13 @@ class Controller_DetailScreen: UIViewController, UITableViewDelegate, UITableVie
         vw.addSubview(colon2)
         
         if(section == 0){
-            vw.backgroundColor = UIColor.grayColor()
+            vw.backgroundColor = UIColor.clearColor()
             colon1.text = "Videolar"
             colon2.text = "Fotoğraflar"
             
         }
         if(section == 1){
-            vw.backgroundColor = UIColor.purpleColor()
+            vw.backgroundColor = UIColor.clearColor()
             colon1.text = "Oyuncular"
             colon2.text = "Roller"
         }

@@ -37,6 +37,7 @@ class Cell_Actors: UITableViewCell {
             make.left.equalTo(self.snp_left).offset(20)
         }
         lbl_actor.text = "Actor Name"
+        lbl_actor.textColor = UIColor.whiteColor()
         
         
         self.addSubview(lbl_role)
@@ -45,6 +46,7 @@ class Cell_Actors: UITableViewCell {
             make.left.equalTo(self.snp_left).offset(200)
         }
         lbl_role.text = "Role Name"
+        lbl_role.textColor = UIColor.whiteColor()
         
         
         self.contentView.setNeedsLayout()

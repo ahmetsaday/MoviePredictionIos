@@ -23,14 +23,15 @@ class View_Detail: UIView {
     
     func setup(target:Controller_ListScreen){
         
-        self.backgroundColor = UIColor.whiteColor()
+        self.backgroundColor = UIColor.clearColor()
         
         tableView.frame = self.frame
         tableView.registerClass(Cell_ListScreen.self, forCellReuseIdentifier: "Cell_ListScreen")
         tableView.rowHeight = self.frame.height/5
         tableView.delegate = target
         tableView.dataSource = target
-        tableView.backgroundColor = UIColor.whiteColor()
+        tableView.backgroundColor = UIColor.clearColor()
+        tableView.tableFooterView = UIView(frame: CGRectZero)
         //tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         self.addSubview(tableView)
     }

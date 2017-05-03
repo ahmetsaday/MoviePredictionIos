@@ -58,7 +58,7 @@ class Cell_ListScreen: UITableViewCell {
         }
         movieName.text = "Film Adı"
         movieName.textColor = UIColor.yellowColor()
-        movieName.backgroundColor = UIColor.grayColor()
+        //movieName.backgroundColor = UIColor.grayColor()
         
         
         self.addSubview(date)
@@ -67,7 +67,7 @@ class Cell_ListScreen: UITableViewCell {
             make.left.equalTo(self.snp_left).offset(180)
         }
         date.text = "(2017)"
-        date.textColor = UIColor.grayColor()
+        date.textColor = UIColor.whiteColor()
         //date.backgroundColor = UIColor.grayColor()
         
         
@@ -77,7 +77,7 @@ class Cell_ListScreen: UITableViewCell {
             make.left.equalTo(self.snp_left).offset(110)
         }
         time.text = "2s 49dk"
-        time.textColor = UIColor.grayColor()
+        time.textColor = UIColor.whiteColor()
         //time.backgroundColor = UIColor.grayColor()
         
         
@@ -87,7 +87,7 @@ class Cell_ListScreen: UITableViewCell {
             make.left.equalTo(self.snp_left).offset(180)
         }
         type.text = "Macera, Bilim Kurgu"
-        type.textColor = UIColor.grayColor()
+        type.textColor = UIColor.whiteColor()
         //type.backgroundColor = UIColor.grayColor()
         
         
@@ -97,7 +97,7 @@ class Cell_ListScreen: UITableViewCell {
             make.right.equalTo(self.snp_right).offset(-20)
         }
         score.text = "7.9"
-        score.textColor = UIColor.grayColor()
+        score.textColor = UIColor.whiteColor()
         //score.backgroundColor = UIColor.grayColor()
         
         self.addSubview(star)
@@ -107,8 +107,6 @@ class Cell_ListScreen: UITableViewCell {
             make.width.equalTo(20)
             make.height.equalTo(20)
         }
-        star.backgroundColor = UIColor.yellowColor()
-        //star.image = UIImage(named:"star.png") Start ekleyemedim.
         
         
         self.addSubview(director)
@@ -117,7 +115,7 @@ class Cell_ListScreen: UITableViewCell {
             make.left.equalTo(self.snp_left).offset(110)
         }
         director.text = "director name"
-        director.textColor = UIColor.grayColor()
+        director.textColor = UIColor.whiteColor()
         //director.backgroundColor = UIColor.grayColor()
         
         
@@ -127,7 +125,7 @@ class Cell_ListScreen: UITableViewCell {
             make.left.equalTo(self.snp_left).offset(110)
         }
         actors.text = "Actor Name, Actor Name..."
-        actors.textColor = UIColor.grayColor()
+        actors.textColor = UIColor.whiteColor()
         //actors.backgroundColor = UIColor.grayColor()
         
         
@@ -137,12 +135,8 @@ class Cell_ListScreen: UITableViewCell {
             make.left.equalTo(self.snp_left).offset(110)
         }
         descriptions.text = "descriptions of Movie..."
-        descriptions.textColor = UIColor.grayColor()
-        //descriptions.backgroundColor = UIColor.grayColor()
-
-
-        
-       // self.backgroundColor = UIColor.whiteColor()
+        descriptions.textColor = UIColor.whiteColor()
+   
         
         self.contentView.setNeedsLayout()
         self.contentView.setNeedsDisplay()

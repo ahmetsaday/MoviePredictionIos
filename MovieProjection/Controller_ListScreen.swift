@@ -9,6 +9,7 @@
 import UIKit
 
 class Controller_ListScreen: UIViewController, UITableViewDelegate, UITableViewDataSource{
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +18,10 @@ class Controller_ListScreen: UIViewController, UITableViewDelegate, UITableViewD
         let listview = View_Detail(frame: self.view.frame)
         listview.setup(self)
         self.view.addSubview(listview)
+        
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named:"arkaplan.jpg")!).colorWithAlphaComponent(0.30)
+        //self.view.isOpaque = false
+        
     }
 
     
@@ -34,7 +39,10 @@ class Controller_ListScreen: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell_ListScreen", forIndexPath: indexPath) as! Cell_ListScreen
+        cell.layer.backgroundColor = UIColor.clearColor().CGColor
         
+        let image = UIImage(named: "star.png")
+        cell.star.image = image
                 
         return cell
     }
