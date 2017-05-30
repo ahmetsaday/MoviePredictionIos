@@ -8,4 +8,7 @@ target 'MovieProjection' do
   # Pods for MovieProjection
   pod 'SnapKit','=0.21.1'
   pod 'Alamofire','=3.4.1'
+  pod 'SwiftyJSON','2.3.2'
+  pod 'SDWebImage'
+  pod 'FlatColor'
 end

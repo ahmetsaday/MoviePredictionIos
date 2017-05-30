@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+import FlatColor
 
 class View_DetailScreen: UIView{
     
@@ -28,6 +29,7 @@ class View_DetailScreen: UIView{
     var lbl_directorName = UILabel()
     var lbl_actors = UILabel()
     var lbl_actorsName = UILabel()
+    var img_Back = UIImageView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -41,7 +43,15 @@ class View_DetailScreen: UIView{
     
     func setCreateUI(target:Controller_DetailScreen){
         
-        self.backgroundColor = UIColor.clearColor()
+        self.backgroundColor = UIColor.whiteColor()
+        
+        self.addSubview(img_Back)
+        img_Back.snp_makeConstraints { (make) in
+            make.size.equalTo(self)
+            make.center.equalTo(self)
+        }
+        img_Back.image = UIImage(named:"arkaplan.jpg")
+        
         
         
         headerView.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height/2.2)
@@ -49,23 +59,21 @@ class View_DetailScreen: UIView{
         
         headerView.addSubview(lbl_filmName)
         lbl_filmName.snp_makeConstraints{ (make) in
-            make.top.equalTo(headerView.snp_top).offset(20)
-            make.width.equalTo(70)
-           // make.height.equalTo(40)
+            make.top.equalTo(headerView.snp_top).offset(10)
+            make.right.equalTo(headerView).offset(-90)
             make.left.equalTo(15)
-            //make.centerX.equalTo(headerView)
         }
-        lbl_filmName.text = "Film Adı"
+        
         lbl_filmName.textColor = UIColor.yellowColor()
         
         
         headerView.addSubview(lbl_year)
         lbl_year.snp_makeConstraints{ (make) in
-            make.top.equalTo(headerView.snp_top).offset(20)
+            make.top.equalTo(headerView.snp_top).offset(10)
             make.width.equalTo(50)
-            make.left.equalTo(90)
+            make.right.equalTo(-10)
         }
-        lbl_year.text = "(2017)"
+        
         lbl_year.textColor = UIColor.whiteColor()
         
         
@@ -75,7 +83,7 @@ class View_DetailScreen: UIView{
             make.width.equalTo(70)
             make.left.equalTo(15)
         }
-        lbl_time.text = "2s 49dk"
+        
         lbl_time.textColor = UIColor.whiteColor()
         
         
@@ -84,7 +92,7 @@ class View_DetailScreen: UIView{
             make.top.equalTo(headerView.snp_top).offset(40)
             make.left.equalTo(90)
         }
-        lbl_type.text = "Macera, Dram"
+        
         lbl_type.textColor = UIColor.whiteColor()
         
         
@@ -102,7 +110,7 @@ class View_DetailScreen: UIView{
             make.top.equalTo(headerView.snp_top).offset(30)
             make.right.equalTo(-10)
         }
-        lbl_score.text = "7.9"
+        
         lbl_score.textColor = UIColor.whiteColor()
         
         
@@ -123,7 +131,7 @@ class View_DetailScreen: UIView{
             make.width.equalTo(250)
             make.height.equalTo(120)
         }
-        img_video.backgroundColor = UIColor.grayColor()
+        img_video.backgroundColor = UIColor.clearColor()
         
         
         headerView.addSubview(lbl_description)
@@ -131,8 +139,9 @@ class View_DetailScreen: UIView{
             make.top.equalTo(headerView.snp_top).offset(200)
             make.left.equalTo(15)
         }
-        lbl_description.text = "this area is desciption which is about movie"
+        
         lbl_description.textColor = UIColor.whiteColor()
+        lbl_description.numberOfLines = 2
         
         
         headerView.addSubview(lbl_director)
@@ -149,7 +158,6 @@ class View_DetailScreen: UIView{
             make.top.equalTo(headerView.snp_top).offset(235)
             make.left.equalTo(120)
         }
-        lbl_directorName.text = "Director Name"
         lbl_directorName.textColor = UIColor.whiteColor()
         
         
@@ -167,18 +175,24 @@ class View_DetailScreen: UIView{
             make.top.equalTo(headerView.snp_top).offset(265)
             make.left.equalTo(120)
         }
-        lbl_actorsName.text = "actor 1, actor 2, actor 3"
+        lbl_actorsName.numberOfLines = 2
         lbl_actorsName.textColor = UIColor.whiteColor()
         
         
-        tableView.frame = self.frame
+        self.addSubview(tableView)
+        tableView.snp_makeConstraints { (make) in
+            make.top.equalTo(self).offset(64)
+            make.bottom.equalTo(self)
+            make.left.equalTo(self)
+            make.right.equalTo(self)
+            make.center.equalTo(self)
+        }
         tableView.registerClass(Cell_Actors.self, forCellReuseIdentifier: "Cell_Actors")
-        
         tableView.registerClass(Cell_Content.self, forCellReuseIdentifier: "CELL_CONTENT")
         //tableView.rowHeight = self.frame.height/10
         tableView.delegate = target
         tableView.dataSource = target
-        tableView.backgroundColor = UIColor.clearColor()
+        tableView.backgroundColor = UIColor.hexColor(0x000000, alpha: 0.9)
         tableView.tableHeaderView = headerView
         self.addSubview(tableView)
 

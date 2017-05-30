@@ -18,6 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         
+        configurationApi.domain = "http://159.203.131.130"
+        configurationApi.port = ":3000"
+        configurationApi.version = ""
+        
+        
+
+        
         let frame = UIScreen.mainScreen().bounds
         window = UIWindow(frame: frame)
         let itemsViewControler = Controller_ListScreen()//baslicak olan class

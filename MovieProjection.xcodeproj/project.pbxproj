@@ -21,6 +21,13 @@
 		10FA121F1E94C149009F7F54 /* View_DetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FA121E1E94C149009F7F54 /* View_DetailScreen.swift */; };
 		10FA12211E94C2E9009F7F54 /* Controller_DetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FA12201E94C2E9009F7F54 /* Controller_DetailScreen.swift */; };
 		66F074DFA7DFC1D75A013156 /* Pods_MovieProjection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62BB65F6F538C2369AC6988D /* Pods_MovieProjection.framework */; };
+		EF1E5E651EDAEDE600B28D05 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF1E5E621EDAEDE600B28D05 /* Alamofire.framework */; };
+		EF1E5E661EDAEDE600B28D05 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF1E5E631EDAEDE600B28D05 /* SnapKit.framework */; };
+		EF1E5E671EDAEDE600B28D05 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF1E5E641EDAEDE600B28D05 /* SwiftyJSON.framework */; };
+		EF2714A31EDC9EA20026659F /* FlatColor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF2714A21EDC9EA20026659F /* FlatColor.framework */; };
+		EFD8729C1EDB0AB300D0E052 /* RequestConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD8729B1EDB0AB300D0E052 /* RequestConnection.swift */; };
+		EFD8729E1EDB0D0900D0E052 /* Modal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD8729D1EDB0D0900D0E052 /* Modal.swift */; };
+		EFD872A01EDB167300D0E052 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFD8729F1EDB167300D0E052 /* SDWebImage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +49,13 @@
 		4836D6A6154D6FEE33C032C1 /* Pods-MovieProjection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieProjection.release.xcconfig"; path = "Pods/Target Support Files/Pods-MovieProjection/Pods-MovieProjection.release.xcconfig"; sourceTree = "<group>"; };
 		62BB65F6F538C2369AC6988D /* Pods_MovieProjection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieProjection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3371C5AB4B821E04B895CF9 /* Pods-MovieProjection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieProjection.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MovieProjection/Pods-MovieProjection.debug.xcconfig"; sourceTree = "<group>"; };
+		EF1E5E621EDAEDE600B28D05 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/MovieProjection-dbiwrlomnjwmpfboaflgpfobeqti/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
+		EF1E5E631EDAEDE600B28D05 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = "../../../Library/Developer/Xcode/DerivedData/MovieProjection-dbiwrlomnjwmpfboaflgpfobeqti/Build/Products/Debug-iphonesimulator/SnapKit/SnapKit.framework"; sourceTree = "<group>"; };
+		EF1E5E641EDAEDE600B28D05 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../../Library/Developer/Xcode/DerivedData/MovieProjection-dbiwrlomnjwmpfboaflgpfobeqti/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
+		EF2714A21EDC9EA20026659F /* FlatColor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FlatColor.framework; path = "../../../Library/Developer/Xcode/DerivedData/MovieProjection-dbiwrlomnjwmpfboaflgpfobeqti/Build/Products/Debug-iphonesimulator/FlatColor/FlatColor.framework"; sourceTree = "<group>"; };
+		EFD8729B1EDB0AB300D0E052 /* RequestConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestConnection.swift; sourceTree = "<group>"; };
+		EFD8729D1EDB0D0900D0E052 /* Modal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Modal.swift; sourceTree = "<group>"; };
+		EFD8729F1EDB167300D0E052 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = "Pods/../build/Debug-iphoneos/SDWebImage/SDWebImage.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +63,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF2714A31EDC9EA20026659F /* FlatColor.framework in Frameworks */,
+				EFD872A01EDB167300D0E052 /* SDWebImage.framework in Frameworks */,
+				EF1E5E651EDAEDE600B28D05 /* Alamofire.framework in Frameworks */,
+				EF1E5E661EDAEDE600B28D05 /* SnapKit.framework in Frameworks */,
+				EF1E5E671EDAEDE600B28D05 /* SwiftyJSON.framework in Frameworks */,
 				66F074DFA7DFC1D75A013156 /* Pods_MovieProjection.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -77,12 +96,14 @@
 		1008A5011E8E58A2004592FC /* MovieProjection */ = {
 			isa = PBXGroup;
 			children = (
+				EFD8729B1EDB0AB300D0E052 /* RequestConnection.swift */,
 				10FA121B1E94C088009F7F54 /* DetailScreen */,
 				10E65F6F1E8E8D27009B1815 /* ListScreen */,
 				1008A5021E8E58A2004592FC /* AppDelegate.swift */,
 				1008A5091E8E58A2004592FC /* Assets.xcassets */,
 				1008A50B1E8E58A2004592FC /* LaunchScreen.storyboard */,
 				1008A50E1E8E58A2004592FC /* Info.plist */,
+				EFD8729D1EDB0D0900D0E052 /* Modal.swift */,
 			);
 			path = MovieProjection;
 			sourceTree = "<group>";
@@ -130,6 +151,11 @@
 		642FC4F576BDE34299D03112 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EF2714A21EDC9EA20026659F /* FlatColor.framework */,
+				EFD8729F1EDB167300D0E052 /* SDWebImage.framework */,
+				EF1E5E621EDAEDE600B28D05 /* Alamofire.framework */,
+				EF1E5E631EDAEDE600B28D05 /* SnapKit.framework */,
+				EF1E5E641EDAEDE600B28D05 /* SwiftyJSON.framework */,
 				62BB65F6F538C2369AC6988D /* Pods_MovieProjection.framework */,
 			);
 			name = Frameworks;
@@ -240,7 +266,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		E51E1ECEAD84A7FBB773F607 /* [CP] Copy Pods Resources */ = {
@@ -268,6 +294,7 @@
 				10E65F711E8E8D63009B1815 /* View_ListScreen.swift in Sources */,
 				10605D881E9A707C00662876 /* Cell_Content.swift in Sources */,
 				1008A5051E8E58A2004592FC /* Controller_ListScreen.swift in Sources */,
+				EFD8729C1EDB0AB300D0E052 /* RequestConnection.swift in Sources */,
 				1008A5031E8E58A2004592FC /* AppDelegate.swift in Sources */,
 				10605D8A1E9A723600662876 /* Cell_Photo.swift in Sources */,
 				10605D861E9A6D1A00662876 /* Cell_Actors.swift in Sources */,
@@ -276,6 +303,7 @@
 				10FA12211E94C2E9009F7F54 /* Controller_DetailScreen.swift in Sources */,
 				10E65F741E8E8EBB009B1815 /* Cell_ListScreen.swift in Sources */,
 				10605D8C1E9A75A900662876 /* View_Media.swift in Sources */,
+				EFD8729E1EDB0D0900D0E052 /* Modal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +409,10 @@
 			baseConfigurationReference = B3371C5AB4B821E04B895CF9 /* Pods-MovieProjection.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/SDWebImage",
+				);
 				INFOPLIST_FILE = MovieProjection/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = osx.MovieProjection;
@@ -393,6 +425,10 @@
 			baseConfigurationReference = 4836D6A6154D6FEE33C032C1 /* Pods-MovieProjection.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/SDWebImage",
+				);
 				INFOPLIST_FILE = MovieProjection/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = osx.MovieProjection;

@@ -7,60 +7,108 @@
 //
 
 import UIKit
-import Alamofire
+import SDWebImage
 
 class Controller_ListScreen: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
-
+    
+    var customView : View_Detail!
+    var arr = [Film]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.title = "Movie Prediction"
+        self.navigationController?.navigationBar.barTintColor = UIColor.blackColor()
+        self.navigationBackGroundColor(UIColor.blackColor(), tintC: UIColor.whiteColor())
         
-        let listview = View_Detail(frame: self.view.frame)
-        listview.setup(self)
-        self.view.addSubview(listview)
+        
+        //--
+        customView = View_Detail(frame: self.view.frame)
+        customView.setup(self)
+        self.view.addSubview(customView)
         
         self.view.backgroundColor = UIColor(patternImage: UIImage(named:"arkaplan.jpg")!).colorWithAlphaComponent(0.30)
-        //self.view.isOpaque = false
+
+        getData()
         
-        // Data parsing
-        Alamofire.request(.GET, "http://api.androidhive.info/json/movies.json")
-            .responseJSON { response in
-                
-                
-                
-                if let JSON = response.result.value {
-                    print("JSON: \(JSON)")
-                }
-        }
+    }
+    
+    func navigationBackGroundColor(backGColor:UIColor,tintC:UIColor){
+        
+        self.navigationController!.navigationBar.tintColor = tintC
+        self.navigationController!.navigationBar.barTintColor = backGColor
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        
         
     }
 
+
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        
+        self.customView.tableView.reloadData()  // ...and it is also visible here.
+    }
     
-    // Tableview Delegate
+    
+    
+    func getData(){
+    
+        RequestConnection.sharedInstance().connectionGet("", parameter: "?skip=1&limit=20", complateBlock: { (json) in
+
+            Modal.parseFilm(json, complate: { (flm) in
+                    self.arr.append(flm)
+                }, end: {
+                    self.customView.tableView.reloadData()
+            })
+            
+            
+        }) { (error) in
+            
+        }
+    
+    
+    }
+    // Tableview Delegate and DataSource
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.arr.count
     }
-    
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell_ListScreen", forIndexPath: indexPath) as! Cell_ListScreen
         cell.layer.backgroundColor = UIColor.clearColor().CGColor
         
-        let image = UIImage(named: "star.png")
-        cell.star.image = image
+        
+        cell.star.image = UIImage(named: "star.png")
+        
+        cell.movieName.text = self.arr[indexPath.row].title
+        cell.time.text = self.arr[indexPath.row].duration + " m"
+        cell.descriptions.text = self.arr[indexPath.row].description
+        cell.score.text = String(self.arr[indexPath.row].predicateScore)
+        cell.type.text = self.arr[indexPath.row].type
+        cell.director.text = self.arr[indexPath.row].director[0].name
+        cell.actors.text = self.arr[indexPath.row].oyuncular[0].name + "," + self.arr[indexPath.row].oyuncular[1].name
+        
                 
         return cell
     }
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        let cCell = cell as! Cell_ListScreen
+        cCell.img_Film.sd_setImageWithURL(NSURL(string: self.arr[indexPath.row].poster), placeholderImage: nil, options: SDWebImageOptions.RetryFailed) { (image, err, cache, urk) in
+            
+        }
+
+    }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let destination = Controller_DetailScreen() // Your destination
+        let destination = Controller_DetailScreen(film: self.arr[indexPath.row]) // Your destination
         navigationController?.pushViewController(destination, animated: true)
     }
     

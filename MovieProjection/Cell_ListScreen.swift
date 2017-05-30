@@ -54,6 +54,7 @@ class Cell_ListScreen: UITableViewCell {
         self.addSubview(movieName)
         movieName.snp_makeConstraints{ (make) in
             make.top.equalTo(self.snp_top).offset(15)
+            make.right.equalTo(self.snp_right).offset(-130)
             make.left.equalTo(self.snp_left).offset(110)
         }
         movieName.text = "Film Adı"
@@ -64,7 +65,9 @@ class Cell_ListScreen: UITableViewCell {
         self.addSubview(date)
         date.snp_makeConstraints{ (make) in
             make.top.equalTo(self.snp_top).offset(15)
-            make.left.equalTo(self.snp_left).offset(180)
+            make.left.equalTo(self.movieName.snp_right).offset(2)
+            make.right.equalTo(self.snp_right).offset(-70)
+
         }
         date.text = "(2017)"
         date.textColor = UIColor.whiteColor()
@@ -76,7 +79,6 @@ class Cell_ListScreen: UITableViewCell {
             make.top.equalTo(self.snp_top).offset(37)
             make.left.equalTo(self.snp_left).offset(110)
         }
-        time.text = "2s 49dk"
         time.textColor = UIColor.whiteColor()
         //time.backgroundColor = UIColor.grayColor()
         
